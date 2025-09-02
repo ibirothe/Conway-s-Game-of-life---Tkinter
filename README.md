@@ -1,6 +1,6 @@
 # Conway's Game of Life — Tkinter
 
-![CI](https://github.com/USERNAME/REPO/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/ibirothe/Conway-s-Game-of-life---Tkinter/actions/workflows/ci.yml/badge.svg)
 
 An exemplary Python implementation of **Conway's Game of Life** with a Tkinter GUI.  
 This repository is primarily intended as a **demonstration of Git, GitHub workflows, and clean project structure**, rather than as a full-fledged desktop application.  
