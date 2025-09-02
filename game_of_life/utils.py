@@ -1,10 +1,11 @@
-from typing import List
-import random
 import os
+import random
+from typing import List
 
 # -------------------------------
 # Grid Utilities
 # -------------------------------
+
 
 def create_empty_grid(width: int, height: int) -> List[List[int]]:
     """
@@ -29,9 +30,14 @@ def count_neighbors(grid: List[List[int]], x: int, y: int) -> int:
     height: int = len(grid)
     width: int = len(grid[0])
     directions: List[tuple[int, int]] = [
-        (-1, -1), (-1, 0), (-1, 1),
-        (0, -1),           (0, 1),
-        (1, -1),  (1, 0),  (1, 1)
+        (-1, -1),
+        (-1, 0),
+        (-1, 1),
+        (0, -1),
+        (0, 1),
+        (1, -1),
+        (1, 0),
+        (1, 1),
     ]
     return sum(grid[(y + dy) % height][(x + dx) % width] for dx, dy in directions)
 
@@ -39,6 +45,7 @@ def count_neighbors(grid: List[List[int]], x: int, y: int) -> int:
 # -------------------------------
 # Pattern Utilities
 # -------------------------------
+
 
 def load_pattern(filename: str) -> List[List[int]]:
     """
@@ -50,7 +57,7 @@ def load_pattern(filename: str) -> List[List[int]]:
     """
     if not os.path.isfile(filename):
         raise FileNotFoundError(f"Pattern file not found: {filename}")
-    
+
     with open(filename, "r") as f:
         grid: List[List[int]] = []
         for line in f:
@@ -60,7 +67,9 @@ def load_pattern(filename: str) -> List[List[int]]:
     return grid
 
 
-def apply_pattern(grid: List[List[int]], pattern: List[List[int]], top: int = 0, left: int = 0) -> None:
+def apply_pattern(
+    grid: List[List[int]], pattern: List[List[int]], top: int = 0, left: int = 0
+) -> None:
     """
     Apply a smaller pattern onto an existing grid at position (top, left).
     Modifies the grid in-place.

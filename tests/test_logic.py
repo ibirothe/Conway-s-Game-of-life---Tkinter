@@ -1,5 +1,6 @@
 import unittest
 from typing import List
+
 from game_of_life.logic import GameOfLife
 
 
@@ -64,7 +65,7 @@ class TestGameOfLife(unittest.TestCase):
 
     def test_update_map_overpopulation(self) -> None:
         """Live cell with more than 3 neighbors dies."""
-        cells: List[tuple[int, int]] = [(0,0), (0,1), (1,0), (1,1), (0,2)]
+        cells: List[tuple[int, int]] = [(0, 0), (0, 1), (1, 0), (1, 1), (0, 2)]
         for y, x in cells:
             self.game.grid[y][x] = 1
         self.game.update_map()

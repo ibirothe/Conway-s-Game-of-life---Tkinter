@@ -1,9 +1,10 @@
 from typing import List
+
 from game_of_life.utils import count_neighbors, create_empty_grid, random_grid
 
 # Conway's rules
 SURVIVE_NEIGHBORS = {2, 3}  # Live cell survives with 2 or 3 neighbors
-BIRTH_NEIGHBORS = {3}       # Dead cell becomes alive with exactly 3 neighbors
+BIRTH_NEIGHBORS = {3}  # Dead cell becomes alive with exactly 3 neighbors
 
 
 class GameOfLife:

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+game_of_life/__init__.py
+game_of_life/gui.py
+game_of_life/logic.py
+game_of_life/utils.py
+game_of_life.egg-info/PKG-INFO
+game_of_life.egg-info/SOURCES.txt
+game_of_life.egg-info/dependency_links.txt
+game_of_life.egg-info/requires.txt
+game_of_life.egg-info/top_level.txt
+tests/test_logic.py
