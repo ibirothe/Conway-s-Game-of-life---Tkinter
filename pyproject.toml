@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "game-of-life"
+version = "0.1.0"
+description = "A Tkinter implementation of Conway's Game of Life"
+authors = [
+    { name="Pascal Rothe", email="ibirothe@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["game of life", "tkinter", "conway", "python"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "mypy", "flake8"]
+
+[project.urls]
+"Homepage" = "https://github.com/ibirothe/Conway-s-Game-of-life---Tkinter"
+"Issues" = "https://github.com/ibirothe/Conway-s-Game-of-life---Tkinter/issues"

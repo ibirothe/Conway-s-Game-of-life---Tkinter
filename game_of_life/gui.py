@@ -65,8 +65,6 @@ class GameOfLifeApp(tk.Tk):
 
         self.game.randomize_map()
         self.draw_board()
-        self.toggle_play()
-        self.update_loop()
 
     # --- Button actions ---
     def toggle_play(self) -> None:
