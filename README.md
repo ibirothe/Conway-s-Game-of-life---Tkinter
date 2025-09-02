@@ -24,4 +24,3 @@ This repository is primarily intended as a **demonstration of Git, GitHub workfl
 1. Clone the repository:
    ```bash
    git clone https://github.com/ibirothe/Conway-s-Game-of-life---Tkinter.git
-   cd REPO
