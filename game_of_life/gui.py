@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import Event, Widget, ttk
+from tkinter import ttk
 from typing import List, Optional, cast
 
 from .logic import GameOfLife
@@ -83,6 +83,7 @@ class GameOfLifeApp(tk.Tk):
         # Start with random map
         self.game.randomize_map()
         self.draw_board()
+        self.update_loop()
 
     # --- Button actions ---
     def toggle_play(self) -> None:
@@ -102,7 +103,7 @@ class GameOfLifeApp(tk.Tk):
         self.draw_board()
 
     # --- Input ---
-    def on_click(self, event: Event[Widget]) -> None:
+    def on_click(self, event: tk.Event) -> None:  # type: ignore[type-arg]
         x, y = event.x // CELL_SIZE, event.y // CELL_SIZE
         if 0 <= x < self.game.width and 0 <= y < self.game.height:
             self.game.touch_tile(x, y)
