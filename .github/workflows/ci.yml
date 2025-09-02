@@ -35,7 +35,7 @@ jobs:
 
     - name: Type-check with mypy
       run: |
-        mypy game_of_life
+        mypy --config-file mypy.ini game_of_life
 
     - name: Check code formatting with black
       run: |
