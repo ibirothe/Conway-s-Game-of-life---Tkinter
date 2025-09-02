@@ -24,7 +24,22 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest", "mypy", "flake8"]
+dev = [
+    "pytest>=8.0.0",
+    "mypy>=1.8.0",
+    "flake8>=7.0.0",
+    "black>=24.8.0",
+    "isort>=5.13.2",
+    "pre-commit>=3.3.0"
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
 
 [project.urls]
 "Homepage" = "https://github.com/ibirothe/Conway-s-Game-of-life---Tkinter"
